@@ -1,4 +1,5 @@
 import './Hero.css'
+import { asset } from '../utils/asset'
 
 const nodes = [
   { id: 'web', label: 'Web', cx: 230, cy: 70 },
@@ -87,10 +88,10 @@ export default function Hero() {
             </svg>
 
             <div className="hero-diagram-photo">
-              <img src="/images/yakubu-portrait.jpg" alt="Yakubu Ishaq" />
+              <img src={asset('/images/yakubu-portrait.jpg')} alt="Yakubu Ishaq" />
             </div>
             <img
-              src="/images/yaks-tech-badge.png"
+              src={asset('/images/yaks-tech-badge.png')}
               alt="Yaks_tech logo"
               className="hero-diagram-badge"
             />

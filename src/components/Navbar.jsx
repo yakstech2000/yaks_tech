@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Navbar.css'
+import { asset } from '../utils/asset'
 
 const links = [
   { href: '#home', label: 'Home' },
@@ -27,7 +28,7 @@ export default function Navbar() {
     <header className={`navbar ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="navbar-inner">
         <a href="#home" className="navbar-brand" onClick={closeMenu}>
-          <img src="/images/yaks-tech-badge.png" alt="" className="navbar-logo" />
+          <img src={asset('/images/yaks-tech-badge.png')} alt="" className="navbar-logo" />
           Yaks<span>_tech</span>
         </a>
 

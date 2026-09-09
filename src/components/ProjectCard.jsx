@@ -1,4 +1,5 @@
 import useReveal from '../hooks/useReveal'
+import { asset } from '../utils/asset'
 import './ProjectCard.css'
 
 export default function ProjectCard({ project, index = 0 }) {
@@ -12,7 +13,7 @@ export default function ProjectCard({ project, index = 0 }) {
       style={{ transitionDelay: `${(index % 3) * 90}ms` }}
     >
       <div className="project-media">
-        <img src={image} alt={`${name} preview`} loading="lazy" />
+        <img src={asset(image)} alt={`${name} preview`} loading="lazy" />
         {featured && <span className="project-featured-tag">Featured Project</span>}
       </div>
 
